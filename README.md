@@ -1,4 +1,4 @@
-# Volkswagen Automotive Cloud Project Structure
+# A default .NET Project Structure
 
 ```
     _    _
