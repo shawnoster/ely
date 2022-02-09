@@ -119,10 +119,32 @@ Moving document management out of external systems and into a repo offers severa
 - Keep information with the project and provide links instead of copying/duplicating
 - Keep documents up to date
 
-### `/docs/decisions`
+### `/docs/decision_records/`
 
 Architecture Decision Records (ADRs or simply decision records) are a collection of records for "architecturally significant" decisions. A decision record is a short markdown file in a specific light-weight format.
 
-### `/docs/development`
+#### Creating new decision records
 
-Files
+A new decision record should be a _.md_ file named as 
+
+```
+<category prefix>-<sequence number in category>-<descriptive title>.md
+```
+
+|Category|Prefix|
+|----|----|
+|Architecture|ARC|
+|API|API|
+|CLI|CLI|
+|SDKs|SDK|
+|Engineering|ENG|
+
+A decision record should contain the following fields:
+
+* **Status** - can be "proposed", "accepted", "implemented", or "rejected".
+* **Context** - the context of the design discussion.
+* **Decision** - Description of the decision.
+* **Consequences** - what impacts this decision may create.
+* **Implementation** - when a decision is implemented, the corresponding doc should be updated with the following information (when applicable):
+  * Release version
+  * Associated test cases
